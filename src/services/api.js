@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api/jobs';
+// Use the Render backend URL for production
+const API_BASE = process.env.REACT_APP_API_URL || 'https://student-job-tracker-backend-ye6h.onrender.com/api/jobs';
 
 export const getJobs = () => axios.get(API_BASE);
 
